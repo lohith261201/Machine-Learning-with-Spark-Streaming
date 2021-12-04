@@ -16,3 +16,6 @@ We are currently working on it.
 # For the preprocessing references used: 
 -  https://spark.apache.org/docs/latest/ml-features
 -  https://www.codespeedy.com/spam-classification-using-pyspark-in-python/
+
+# Output after preprocessing : 
+![priya-bd-2](https://user-images.githubusercontent.com/56394628/144718670-49e91e19-b757-4be1-b550-83362f80145b.png)
