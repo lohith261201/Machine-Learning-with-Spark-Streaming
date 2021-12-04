@@ -12,3 +12,7 @@ We are currently working on it.
 - Execute the following ``` python3 stream.py -f spam -b 20```
 - Where here option f specifes the datase and b specifies the batch size
 - Simultaneously execute ```$SPARK_HOME/opt/bin/spark-submit <path to streaming.py>```
+
+# For the preprocessing references used: 
+-  https://spark.apache.org/docs/latest/ml-features
+-  https://www.codespeedy.com/spam-classification-using-pyspark-in-python/
