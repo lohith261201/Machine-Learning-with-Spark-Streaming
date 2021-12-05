@@ -37,7 +37,7 @@ def tokenizer_func(df):
 # Preprocessing Function
 
 #Naive Bayes classifier
-'''def model(data):
+def model(data):
 	data_array =  np.array(data.select("features").collect())
 	label_data=np.array(data.select("label").collect())
 
@@ -52,7 +52,7 @@ def tokenizer_func(df):
 	clf.fit(X_train, y_train)
 	y_pred=clf.predict(X_test)
 	print(accuracy_score(y_test, y_pred))
-'''	
+	
 def model1(data):	
         data_array =  np.array(data.select("features").collect())
         label_data=np.array(data.select("label").collect())
