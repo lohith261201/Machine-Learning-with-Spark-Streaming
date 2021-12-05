@@ -11,6 +11,15 @@ from pyspark.ml.linalg import Vector
 from pyspark.sql.functions import length
 from pyspark.ml import Pipeline
 
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+#from sklearn import linear_model
+from sklearn.linear_model import SGDClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import make_pipeline
+import numpy as np
+
 # getting the sparkContext - which creates a new spark job
 
 sc = SparkContext("local[2]", "DetectionOfSpam")
@@ -27,6 +36,35 @@ def tokenizer_func(df):
 '''
 # Preprocessing Function
 
+#Naive Bayes classifier
+'''def model(data):
+	data_array =  np.array(data.select("features").collect())
+	label_data=np.array(data.select("label").collect())
+
+
+	nsamples, nx, ny = data_array.shape
+	data_array = data_array.reshape((nsamples,nx*ny))
+	
+	
+	
+	X_train, X_test, y_train, y_test = train_test_split(data_array,label_data,test_size=0.33, random_state=42)
+	clf = MultinomialNB()
+	clf.fit(X_train, y_train)
+	y_pred=clf.predict(X_test)
+	print(accuracy_score(y_test, y_pred))
+'''	
+def model1(data):	
+        data_array =  np.array(data.select("features").collect())
+        label_data=np.array(data.select("label").collect())
+        nsamples, nx, ny = data_array.shape
+        data_array = data_array.reshape((nsamples,nx*ny))
+        X_train, X_test, y_train, y_test = train_test_split(data_array,label_data,test_size=0.33, random_state=42)
+        clf = make_pipeline(StandardScaler(),SGDClassifier(max_iter=1000, tol=1e-3))
+        clf.fit(X_train,y_train)
+       
+        print(clf.score(X_test,y_test))
+	
+
 def dataclean(df):
 	df = df.withColumn('length',length(df['feature1']))
 	tokenizer = Tokenizer(inputCol="feature1", outputCol="token_text")
@@ -38,7 +76,7 @@ def dataclean(df):
 	data_prep_pipe = Pipeline(stages=[ham_spam_to_num,tokenizer,stopremove,count_vec,idf,clean_up])
 	cleaner = data_prep_pipe.fit(df)
 	clean_data = cleaner.transform(df)
-	clean_data.show()
+	return clean_data
 	
 # Function to read the data stream and print the respective data read.
 
@@ -48,7 +86,9 @@ def RDDtoDf(x):
         z = json.loads(y)
         df=spark.createDataFrame(z.values())
         #tokenizer_func(df)
-        dataclean(df)
+        cleandata=dataclean(df)
+        #model(cleandata)
+        model1(cleandata)
         #df.show()
         #print(k)
 
