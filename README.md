@@ -36,11 +36,13 @@
 - Multinomial Naive Bayes Classifier
 - SGD Classifier 
 - Mini Batch K-Means
-- Perceptron 
+
 
 # Evaluation of the Model :
 - Accuracy
 - Confusion Matrix 
+- precision
+- recall
 
 # References for multinomial naive bayes classifier-
 - https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
