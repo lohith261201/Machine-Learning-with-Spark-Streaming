@@ -41,3 +41,8 @@
 # Evaluation of the Model :
 - Accuracy
 - Confusion Matrix 
+
+# References for multinomial naive bayes classifier-
+- https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
+
+
