@@ -17,5 +17,12 @@ We are currently working on it.
 -  https://spark.apache.org/docs/latest/ml-features
 -  https://www.codespeedy.com/spam-classification-using-pyspark-in-python/
 
+# Methodologies used for preprocessing :
+- Tokenizer
+- Stop Words Removal
+- Count Vectorizer
+- String Indexer - to convert spam to 1 and ham to 0
+- Vector Assembler
+
 # Output after preprocessing : 
 ![priya-bd-2](https://user-images.githubusercontent.com/56394628/144718670-49e91e19-b757-4be1-b550-83362f80145b.png)
