@@ -34,7 +34,7 @@
 
 # Models Used :
 - Multinomial Naive Bayes Classifier
-- SGD Classifier 
+- SGD Regressor
 - Mini Batch K-Means
 
 
