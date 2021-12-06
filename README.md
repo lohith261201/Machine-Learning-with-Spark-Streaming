@@ -1,9 +1,14 @@
 # Machine-Learning-with-Spark-Streaming
-Team ID-BD_203_227_301.
-This repository is dedicated for the big data project component.
-The topic we have chosen is Machine Learning With Spark Streaming.
-We have chosen Spam Analysis as our sub topic.
-We are currently working on it.
+- Team ID-BD_203_227_301.
+- This repository is dedicated for the big data project component.
+- The topic we have chosen is Machine Learning With Spark Streaming.
+- We have chosen Spam Analysis as our sub topic.
+
+# Team Members
+
+1) [LOHITH SRINIVAS T](https://github.com/lohith261201) PES2UG19CS203 
+2) [MEELA DEEPTI](https://github.com/Priya2410) PES2UG19CS227
+3) [PRIYA MOHATA](https://github.com/deeptimeela) PES2UG19CS301 
 
 
 # Steps for streaming data :
@@ -26,3 +31,13 @@ We are currently working on it.
 
 # Output after preprocessing : 
 ![priya-bd-2](https://user-images.githubusercontent.com/56394628/144718670-49e91e19-b757-4be1-b550-83362f80145b.png)
+
+# Models Used :
+- Multinomial Naive Bayes Classifier
+- SGD Classifier 
+- Mini Batch K-Means
+- Perceptron 
+
+# Evaluation of the Model :
+- Accuracy
+- Confusion Matrix 
