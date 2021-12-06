@@ -34,21 +34,18 @@
 
 # Models Used :
 - Multinomial Naive Bayes Classifier
-- SGD Regressor
+- Bernoulli Naive Bayes Classifier
 - Mini Batch K-Means
 
 
 # Evaluation of the Model :
 - Accuracy
 - Confusion Matrix 
-- precision
-- recall
 
 # References for multinomial naive bayes classifier-
 - https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html
 
-# References for sgd linear regressor:
-- https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDRegressor.html
+
 
 
 
