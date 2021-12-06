@@ -45,13 +45,12 @@ def model(data):
 	nsamples, nx, ny = data_array.shape
 	data_array = data_array.reshape((nsamples,nx*ny))
 	
-	
-	
 	X_train, X_test, y_train, y_test = train_test_split(data_array,label_data,test_size=0.33, random_state=42)
 	clf = MultinomialNB()
 	clf.fit(X_train, y_train)
-	y_pred=clf.predict(X_test)
-	print(accuracy_score(y_test, y_pred))
+	print(clf.score(X_test,y_test))
+	#y_pred=clf.predict(X_test)
+	#print(accuracy_score(y_test, y_pred))
 	
 def model1(data):	
         data_array =  np.array(data.select("features").collect())
@@ -86,9 +85,10 @@ def RDDtoDf(x):
         z = json.loads(y)
         df=spark.createDataFrame(z.values())
         #tokenizer_func(df)
-        cleandata=dataclean(df)
+        #cleandata=dataclean(df)
+        df.show()
         #model(cleandata)
-        model1(cleandata)
+        #model1(cleandata)
         #df.show()
         #print(k)
 
