@@ -7,8 +7,8 @@
 # Team Members
 
 1) [LOHITH SRINIVAS T](https://github.com/lohith261201) PES2UG19CS203 
-2) [MEELA DEEPTI](https://github.com/Priya2410) PES2UG19CS227
-3) [PRIYA MOHATA](https://github.com/deeptimeela) PES2UG19CS301 
+2) [MEELA DEEPTI](https://github.com/deeptimeela) PES2UG19CS227
+3) [PRIYA MOHATA](https://github.com/Priya2410) PES2UG19CS301 
 
 
 # Steps for streaming data :
